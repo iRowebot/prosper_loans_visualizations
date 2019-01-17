@@ -28586,7 +28586,7 @@ Number of loans at 31.77% interest rate: 3672
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here we can see that the <code>CreditScoreRange</code> columns are exactly the same shape. When comparing individuals in the dataset, their <code>Upper</code> scores are exactly 19 points higher than their <code>Lower</code> scores. This can also be seen by comparing the mean of each of the plots above. There was only one loan where the borrower had a credit score less than 400. Everyone else under 400 had a falsely reported <code>CreditScoreRange</code> of 0-19 and a <code>CreditGrade</code> of NC. There were also 591 NaN values in the dataset, but I've chosen not to drop them since they still have <code>CreditGrade</code>s.</p>
-<p>Another big factor in determing a borrowers eligibility is income. Individuals with a higher income should be able to make payments more easily, but do these people actually need loans? I'll visualize <code>StatedMonthlyIncome</code> below to find out.</p>
+<p>Another big factor in determining a borrower’s eligibility is income. Individuals with a higher income should be able to make payments more easily, but do these people actually need loans? I'll visualize <code>StatedMonthlyIncome</code> below to find out.</p>
 
 </div>
 </div>
@@ -28824,19 +28824,7 @@ Name: StatedMonthlyIncome, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The number of loans orignated each month was steadily climbing in the mid 2000's before dropping off a cliff in at the end of 2008. It wasn't until mid way through 2012 that Prosper Loans got back to their pre-housing crisis volume, but once they did, they were able to double their monthly originations within a couple of years. I expect to see a correlation between low interest rates &amp; high origination volume.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Make sure that, after every plot or related series of plots, that you
-include a Markdown cell with comments about what you observed, and what
-you plan on investigating next.</p>
-</blockquote>
+<p>The number of loans originated each month was steadily climbing in the mid 2000's before dropping off a cliff in at the end of 2008. It wasn't until mid-way through 2012 that Prosper Loans got back to their pre-housing crisis volume, but once they did, they were able to double their monthly originations within a couple of years. I expect to see a correlation between low interest rates &amp; high origination volume.</p>
 
 </div>
 </div>
@@ -29398,7 +29386,7 @@ C:\Users\Ernest\Anaconda3\lib\site-packages\scipy\stats\stats.py:1713: FutureWar
 <h3 id="Talk-about-some-of-the-relationships-you-observed-in-this-part-of-the-investigation.-How-did-the-feature(s)-of-interest-vary-with-other-features-in-the-dataset?">Talk about some of the relationships you observed in this part of the investigation. How did the feature(s) of interest vary with other features in the dataset?<a class="anchor-link" href="#Talk-about-some-of-the-relationships-you-observed-in-this-part-of-the-investigation.-How-did-the-feature(s)-of-interest-vary-with-other-features-in-the-dataset?">&#182;</a></h3><blockquote><p>It comes as no surprise that <code>BorrowerRate</code> &amp; <code>CreditScoreRangeUpper</code>had the strongest correlation out of all features plotted. The main reason people care about their credit score is because of the lower interest rates they can get with a high score. The relationship between <code>LoanOriginalAmount</code> &amp; <code>CreditScoreRangeUpper</code> was less apparent, but ploting <code>LoanOriginalAmount</code> on a log scale strengthened the correlation. The reason for the weaker relationship is because borrowers with high credit scores don't always want a higher loan amount, whereas a high credit score almost always comes with a lower interest rate.</p>
 <p>When plotted against the categorical variables, we can see that both <code>LoanOriginalAmount</code> &amp; <code>BorrowerRate</code> went up as the loan <code>Term</code> went up. This is in contrast to every other categorical variable where loan amount &amp; interest rate seemed to be negatively correlated.</p>
 </blockquote>
-<h3 id="Did-you-observe-any-interesting-relationships-between-the-other-features-(not-the-main-feature(s)-of-interest)?">Did you observe any interesting relationships between the other features (not the main feature(s) of interest)?<a class="anchor-link" href="#Did-you-observe-any-interesting-relationships-between-the-other-features-(not-the-main-feature(s)-of-interest)?">&#182;</a></h3><blockquote><p>In the categorical plots, perhaps the most interesting was of <code>ProsperCreditGrade</code> grouped by <code>OriginationYear</code>. This graph shows how Prosper Loan's lending footprint changed over the years. They went from high risk in 2006, to more conservative in 2008 before starting the cycle over again when the housing market crashed. You can also see in the 5th categorical plot that <code>ProsperCreditGrade</code> was a very strong predictor of loan status. Higher risk borrowers with a D or lower were over represented in the Chargedoff &amp; Defaulted categories and under represented in the Current &amp; Completed categories.</p>
+<h3 id="Did-you-observe-any-interesting-relationships-between-the-other-features-(not-the-main-feature(s)-of-interest)?">Did you observe any interesting relationships between the other features (not the main feature(s) of interest)?<a class="anchor-link" href="#Did-you-observe-any-interesting-relationships-between-the-other-features-(not-the-main-feature(s)-of-interest)?">&#182;</a></h3><blockquote><p>In the categorical plots, perhaps the most interesting was of <code>ProsperCreditGrade</code> grouped by <code>OriginationYear</code>. This graph shows how Prosper Loan's lending footprint changed over the years. They went from high risk in 2006, to more conservative in 2008 before starting the cycle over again when the housing market crashed. You can also see in the 5th categorical plot that <code>ProsperCreditGrade</code> was a very strong predictor of loan status. Higher risk borrowers with a D or lower were over represented in the Chargedoff &amp; Defaulted categories and underrepresented in the Current &amp; Completed categories.</p>
 </blockquote>
 
 </div>
@@ -29568,7 +29556,7 @@ https://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The darker points on this scatterplot represent loans from recent years while the ligher points represent older loans. The darker points being clustered in the upper left quadrant makes the trend towards higher loan amounts and lower interest rates quite clear.</p>
+<p>The darker points on this scatterplot represent loans from recent years while the lighter points represent older loans. The darker points being clustered in the upper left quadrant makes the trend towards higher loan amounts and lower interest rates quite clear.</p>
 <p>The next feature I'd like to explore is Average <code>BorrowerRate</code> grouped by <code>OriginationYear</code> and <code>ProsperCreditGrade</code>.</p>
 
 </div>
@@ -29576,7 +29564,7 @@ https://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[880]:</div>
+<div class="prompt input_prompt">In&nbsp;[881]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_subset</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;OriginationYear&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;BorrowerRate&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;ProsperCreditGrade&#39;</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> 
@@ -29617,7 +29605,7 @@ https://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we see that interest rates for borrowers with very low credit went up from where they were in 2006, while those in the moderate range stayed roughtly the same, and those with good credit saw a slight reduction in interest rates. This makes sense when you consider the number of loans that were defaulted on in the previous section. In order for Prosper Loans to still be profitable for their high risk borrowers, they had to raise interest rates to maximize their earning potential.</p>
+<p>Here we see that interest rates for borrowers with very low credit went up from where they were in 2006, while those in the moderate range stayed roughly the same, and those with good credit saw a slight reduction in interest rates. This makes sense when you consider the number of loans that were defaulted on in the previous section. In order for Prosper Loans to still be profitable for their high risk borrowers, they had to raise interest rates to maximize their earning potential.</p>
 <p>For my final plot, I'll create faceted plots in two directions with columns for each <code>Term</code>, rows for each <code>ProsperCreditGrade</code>, and different colors for each <code>OriginationYear</code>.</p>
 
 </div>
@@ -29684,9 +29672,9 @@ https://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Talk-about-some-of-the-relationships-you-observed-in-this-part-of-the-investigation.-Were-there-features-that-strengthened-each-other-in-terms-of-looking-at-your-feature(s)-of-interest?">Talk about some of the relationships you observed in this part of the investigation. Were there features that strengthened each other in terms of looking at your feature(s) of interest?<a class="anchor-link" href="#Talk-about-some-of-the-relationships-you-observed-in-this-part-of-the-investigation.-Were-there-features-that-strengthened-each-other-in-terms-of-looking-at-your-feature(s)-of-interest?">&#182;</a></h3><blockquote><p>The first plot gave me some idea of how loan amount &amp; interest rates differed between different loan terms and the second showed me how loan amount &amp; interest rate changed over time. However, plotting it all together with <code>ProsperCreditGrade</code> made it much easier to spot trends in the data. The first 2 plots also only had small samples of the data, whereas the FacetGrid was big enough to plot all datapoints without much issue.</p>
+<h3 id="Talk-about-some-of-the-relationships-you-observed-in-this-part-of-the-investigation.-Were-there-features-that-strengthened-each-other-in-terms-of-looking-at-your-feature(s)-of-interest?">Talk about some of the relationships you observed in this part of the investigation. Were there features that strengthened each other in terms of looking at your feature(s) of interest?<a class="anchor-link" href="#Talk-about-some-of-the-relationships-you-observed-in-this-part-of-the-investigation.-Were-there-features-that-strengthened-each-other-in-terms-of-looking-at-your-feature(s)-of-interest?">&#182;</a></h3><blockquote><p>The first plot gave me some idea of how loan amount &amp; interest rates differed between different loan terms and the second showed me how loan amount &amp; interest rate changed over time. However, plotting it all together with <code>ProsperCreditGrade</code> made it much easier to spot trends in the data. The first 2 plots also only had small samples of the data, whereas the FacetGrid was big enough to plot all data points without much issue.</p>
 </blockquote>
-<h3 id="Were-there-any-interesting-or-surprising-interactions-between-features?">Were there any interesting or surprising interactions between features?<a class="anchor-link" href="#Were-there-any-interesting-or-surprising-interactions-between-features?">&#182;</a></h3><blockquote><p>While I could tell in my bivariate plots that Prosper Loans was becoming more conservative in their lending policies, I wasn't expecting the maximum loan amount for HR borrowers to be so low. I also didn't realize that loan amounts for 1 year loans were capped at a lower level than 3 &amp; 5 year loans. I previously thought it was a self imposed limit because of the higher payments that come with shorter terms, but the flat tops formed by the points plotted makes it clear that this was a lender imposed limit.</p>
+<h3 id="Were-there-any-interesting-or-surprising-interactions-between-features?">Were there any interesting or surprising interactions between features?<a class="anchor-link" href="#Were-there-any-interesting-or-surprising-interactions-between-features?">&#182;</a></h3><blockquote><p>While I could tell in my bivariate plots that Prosper Loans was becoming more conservative in their lending policies, I wasn't expecting the maximum loan amount for HR borrowers to be so low. I also didn't realize that loan amounts for 1 year loans were capped at a lower level than 3 &amp; 5 year loans. I previously thought it was a self-imposed limit because of the higher payments that come with shorter terms, but the flat tops formed by the points plotted makes it clear that this was a lender imposed limit.</p>
 </blockquote>
 
 </div>
