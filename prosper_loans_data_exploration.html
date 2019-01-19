@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>prosper_loans_data_visualization</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>prosper_loans_data_exploration</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Prosper-Loans---Data-Visualization">Prosper Loans - Data Visualization<a class="anchor-link" href="#Prosper-Loans---Data-Visualization">&#182;</a></h1><h2 id="by-Ernest-Rowe">by Ernest Rowe<a class="anchor-link" href="#by-Ernest-Rowe">&#182;</a></h2><h4 id="Dataset:-Loan-Data-from-Prosper">Dataset: <a href="https://www.google.com/url?q=https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&amp;sa=D&amp;ust=1546576456543000">Loan Data from Prosper</a><a class="anchor-link" href="#Dataset:-Loan-Data-from-Prosper">&#182;</a></h4><blockquote><p>This dataset contains 113,937 loans with 81 variables on each loan, including loan amount, borrower rate (or interest rate), current loan status, borrower income, and many others. More information on the variables in this dataset can be found <a href="https://www.google.com/url?q=https://docs.google.com/spreadsheet/ccc?key%3D0AllIqIyvWZdadDd5NTlqZ1pBMHlsUjdrOTZHaVBuSlE%26usp%3Dsharing&amp;sa=D&amp;ust=1546576456544000">here</a>.</p>
+<h1 id="Prosper-Loans---Data-Exploration">Prosper Loans - Data Exploration<a class="anchor-link" href="#Prosper-Loans---Data-Exploration">&#182;</a></h1><h2 id="by-Ernest-Rowe">by Ernest Rowe<a class="anchor-link" href="#by-Ernest-Rowe">&#182;</a></h2><h4 id="Dataset:-Loan-Data-from-Prosper">Dataset: <a href="https://www.google.com/url?q=https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&amp;sa=D&amp;ust=1546576456543000">Loan Data from Prosper</a><a class="anchor-link" href="#Dataset:-Loan-Data-from-Prosper">&#182;</a></h4><blockquote><p>This dataset contains 113,937 loans with 81 variables each, including loan amount, borrower interest rate, current loan status, borrower income, and many others. More information on the variables in this dataset can be found <a href="https://www.google.com/url?q=https://docs.google.com/spreadsheet/ccc?key%3D0AllIqIyvWZdadDd5NTlqZ1pBMHlsUjdrOTZHaVBuSlE%26usp%3Dsharing&amp;sa=D&amp;ust=1546576456544000">here</a>.</p>
 </blockquote>
 
 </div>
@@ -11786,7 +11786,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import all packages, set plots to be embedded inline, &amp; set pandas max_columns to none.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import packages, set plots to be embedded inline, &amp; set pandas max_columns to none.</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -11800,17 +11800,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Load in your dataset and describe its properties through the questions below.
-Try and motivate your exploration goals through this section.</p>
-</blockquote>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
