@@ -1,2 +1,4 @@
+__pycache__/
 output_toggle.tpl
 .ipynb_checkpoints/
+plotly_credentials.py
