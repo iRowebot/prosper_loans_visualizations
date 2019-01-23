@@ -1,5 +1,5 @@
-# Prosper Loans - Data Visualization
-## by Ernest Rowe
+# Prosper Loans - Loan Amounts, Interest Rates & Geography
+#### by Ernest Rowe
 
 
 #### Dataset: [Loan Data from Prosper](https://www.google.com/url?q=https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&sa=D&ust=1546576456543000)
@@ -15,15 +15,15 @@ Prosper Loans saw massive shifts in their lending over the 10 year period in the
 
 ## Key Insights for Presentation
 
-The greatest insights gained from the presentation were from plotting loan amount & interest rate against categorical variables. The use of violin plots & a log transformation on loan amount uncovered the major differences between loans of different terms. Borrowers with a 1 Year loan enjoy lower interest rates, but their maximum loan amount was capped at $25,000. 3 & 5 year terms both go as high as $35,000, but neither of them have the low interest rates you see with 1 year loans. Paying attention to the interquartile ranges, you can see that almost all of the people taking out 5 year loans do so for large loan amounts. Grouping by OriginationYear, I was able to see that Prosper raised their minimum loan amount from $1,000 to $2,000 in 2011, and they boosted their maximum loan amount from $25,000 to $35,000 in 2013.
+The greatest insights gained from the presentation were from plotting loan amount & interest rate against categorical variables. The use of violin plots & a log transformation on loan amount uncovered the major differences between loans of different terms. Borrowers with a 1 Year loan enjoy lower interest rates, but their maximum loan amount was capped at $25,000. 3 & 5 year terms both went as high as $35,000, but neither of them had the low interest rates you see on a 1 year loan. Paying attention to the interquartile ranges, you can see that almost all of the people taking out 5 year loans do so for large loan amounts. Grouping by origination year, I was able to see that Prosper raised their minimum loan amount from $1,000 to $2,000 in 2011, and they boosted their maximum loan amount from $25,000 to $35,000 in 2013.
 
 ##### Resources:
-https://census.gov
-https://classroom.udacity.com
-https://stackoverflow.com/
-https://stackexchange.com/
-http://seaborn.pydata.org
-http://youtube.com
-https://plot.ly
-http://reddit.com
+https://census.gov<br>
+https://classroom.udacity.com<br>
+https://stackoverflow.com/<br>
+https://stackexchange.com/<br>
+http://seaborn.pydata.org<br>
+http://youtube.com<br>
+https://plot.ly<br>
+http://reddit.com<br>
 http://www.damian.oquanta.info/posts/hide-the-input-cells-from-your-ipython-slides.html
