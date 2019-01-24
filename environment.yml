@@ -56,10 +56,4 @@ dependencies:
   - urllib3=1.24.1
   - wheel=0.32.3
   - zlib=1.2.11
-  - pip:
-      - vs2015_runtime==14.15.26706
-      - win_inet_pton==1.0.1
-      - vc==14.1
-      - icc_rt==2019.0.0
-      - wincertstore==0.2
 prefix: C:\Users\Ernest\Anaconda3\envs\visualizations
