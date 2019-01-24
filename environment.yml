@@ -12,7 +12,6 @@ dependencies:
   - cycler=0.10.0
   - decorator=4.3.0
   - freetype=2.9.1
-  - icc_rt=2019.0.0
   - icu=58.2
   - idna=2.8
   - intel-openmp=2019.1
@@ -55,11 +54,12 @@ dependencies:
   - tornado=5.1.1
   - traitlets=4.3.2
   - urllib3=1.24.1
-  - vc=14.1
-  - vs2015_runtime=14.15.26706
   - wheel=0.32.3
-  - win_inet_pton=1.0.1
-  - wincertstore=0.2
   - zlib=1.2.11
+  - pip:
+      - vs2015_runtime=14.15.26706
+      - win_inet_pton=1.0.1
+      - vc=14.1
+      - icc_rt=2019.0.0
+      - wincertstore=0.2
 prefix: C:\Users\Ernest\Anaconda3\envs\visualizations
-
