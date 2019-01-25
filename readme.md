@@ -1,11 +1,11 @@
-# Prosper Loans - Loan Amounts, Interest Rates & Geography
+# Loan Amounts, Interest Rates & Geography
 #### by Ernest Rowe
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/iRowebot/prosper_loans_visualizations/master?filepath=prosper_loans_data_exploration.ipynb)
 
 #### Dataset: [Loan Data from Prosper](https://www.google.com/url?q=https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&sa=D&ust=1546576456543000)
 _**Additional data from:** [census.gov](https://www2.census.gov/programs-surveys/popest/datasets/2010-2018/national/totals/nst-est2018-alldata.csv)_
 
-This dataset contains 113,937 loans with 81 variables, including loan amount, borrower interest rate, current loan status, borrower income, and many others. More information on the variables in this dataset can be found [here](https://www.google.com/url?q=https://docs.google.com/spreadsheet/ccc?key%3D0AllIqIyvWZdadDd5NTlqZ1pBMHlsUjdrOTZHaVBuSlE%26usp%3Dsharing&sa=D&ust=1546576456544000).
+This dataset from Prosper Loans contains 113,937 loans with 81 variables, including loan amount, borrower interest rate, current loan status, borrower income, and many others. More information on the variables in this dataset can be found [here](https://www.google.com/url?q=https://docs.google.com/spreadsheet/ccc?key%3D0AllIqIyvWZdadDd5NTlqZ1pBMHlsUjdrOTZHaVBuSlE%26usp%3Dsharing&sa=D&ust=1546576456544000).
 
 
 ## Summary of Findings
